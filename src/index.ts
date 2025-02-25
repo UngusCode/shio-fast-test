@@ -5,7 +5,6 @@ import { Keypair } from '@mysten/sui/cryptography';
 
 import { EstimateFee, ExecuteTransactionBlock, ExecuteBundle, AppendCoinToTip, ShioFastRpcUrl } from "shio-fast-sdk";
 import { normal_wallet, shio_wallet } from "./wallet.js";
-import ts from "typescript";
 // pool info
 const CETUS_SUI_USDC_POOL_ID = "0xb8d7d9e66a60c239e7a60110efcf8de6c705580ed924d0dde141f4a0e2c90105"
 const USDC_MINT = "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC"
@@ -14,6 +13,7 @@ const PARTNER_ID = "0xeb863165a109f7791a3182be08aff1438ab2a429314fc135ae19d953af
 //replace with your own node url if not local
 const NODE_URL = "https://fullnode.mainnet.sui.io:443"
 const NUMBER_OF_TRANSACTIONS = 50
+// gas price to use for shio tx
 const SHIO_GAS_PRICE = 6000
 
 // Add this line after the imports to check the URL
