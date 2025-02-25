@@ -53,10 +53,10 @@ async function createNormalSwapTx(client: SuiClient,wallet:Keypair,shiototalgas:
     // sim with shio gas price first and scale accordingly
     tx.setGasPrice(SHIO_GAS_PRICE)
     let estimatedGas = await estimateGas(client,tx)
-    // tip is 5% of estimated gas fee so 21* should be the total fee (network fee + tip)
-
+    
+    // amount to scale up gas price to match shio total fee
     let gasmulitplier = shiototalgas/estimatedGas
-    // console.log(`Estimated gas is ${estimatedGas} and shio total fee is ${shiototalgas} so gas multiplier is ${gasmulitplier}`)
+
 
 
     // gas to use to make fee on normal tx and shio tx equal
