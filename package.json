@@ -5,7 +5,6 @@
   "type": "module",
     "scripts": {
         "start": "node --loader ts-node/esm --no-warnings src/index.ts",
-        "bundle": "node --loader ts-node/esm --no-warnings src/bundle.ts",
         "gen-wallets": "node --loader ts-node/esm --no-warnings src/wallet.ts"
   },
   "keywords": [],
